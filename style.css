@@ -1,0 +1,205 @@
+@page { size: a4; margin: 0mm; }
+
+@media screen {
+	body {
+		font-family: arial, sans-serif;
+		max-width: 1000px;
+		margin: 50px auto;
+		padding: 20px;
+		line-height: 1.6;
+		border: 2px solid #333;
+		border-radius: 10px;
+		display: flex;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.left-column {
+		width: 35%;
+		background: #f4f4f4;
+		padding: 20px;
+		border-right: 2px solid #333;
+	}
+	.profile-photo {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background: #ccc;
+		margin: 20px auto 40px;
+	}
+	.title {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	.right-column {
+		width: 65%;
+		padding: 20px;
+	}
+	h1, h2 {
+		color: #333;
+	}
+	.section {
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+	}
+	a {
+		color: black;
+		text-decoration: none;
+		position: relative;
+		padding-left: 25px; /* space for the icon */
+	}
+	a::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: black;
+		transition: width 0.3s ease-in-out;
+		position: absolute;
+		left: -2px;
+		bottom: -3px;
+	}
+	a:hover::after {
+		width: 100%;
+	}
+	/* icon styling */
+	.icon {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translatey(-50%);
+	}
+	.job-title {
+		font-weight: bold;
+		margin-bottom: 2px;
+	}
+	.date {
+		margin-top: 2px;
+		font-size: 14px;
+		color: #666;
+	}
+	.project {
+		margin-top: 8px;
+	}
+
+	@media (min-width: 768px) {
+		.container {
+			flex-direction: row;
+		}
+		.left-column {
+			width: 35%;
+		}
+		.right-column {
+			width: 65%;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.left-column {
+			border-right: none;
+			border-bottom: 2px solid #333;
+			text-align: center;
+			ul {
+				padding-left: 45%;
+				text-align: left;
+			}
+		}
+		.profile-photo {
+			width: 120px;
+			height: 120px;
+
+		}
+	}
+}
+
+@media print {
+	.left-column {
+		background-color: #f4f4f4 !important;
+		width: 35%;
+		background: #f4f4f4;
+		padding: 20px;
+		border-right: 2px solid #333;
+	}
+	body {
+		font-family: arial, sans-serif;
+		max-width: 1000px;
+		margin: 50px auto;
+		padding: 0px;
+		line-height: 1.6;
+		border: none !important;
+		border-radius: 0px !important;
+		display: flex;
+	}
+	.profile-photo {
+		width: 200px !important;
+		height: 130px !important;
+		border-radius: 50% !important;
+		background: #ccc !important;
+		margin: 0 auto 20px !important;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.title {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	.right-column {
+		width: 65%;
+		padding: 20px;
+	}
+	h1, h2 {
+		color: #333;
+	}
+	.section {
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+	}
+	a {
+		color: black;
+		text-decoration: none;
+		position: relative;
+		padding-left: 25px; /* space for the icon */
+	}
+	a::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background: black;
+		transition: width 0.3s ease-in-out;
+		position: absolute;
+		left: -2px;
+		bottom: -3px;
+	}
+	a:hover::after {
+		width: 100%;
+	}
+	/* icon styling */
+	.icon {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translatey(-50%);
+	}
+	.job-title {
+		font-weight: bold;
+		margin-bottom: 2px;
+	}
+	.date {
+		margin-top: 2px;
+		font-size: 14px;
+		color: #666;
+	}
+	.project {
+		margin-top: 8px;
+	}
+}

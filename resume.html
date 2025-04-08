@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Resume - Clément de Sède</title>
+		<!-- include font awesome for icons -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<style>
+			@page { size: a4; margin: 0mm; }
+			@media print {
+				.left-column {
+					background-color: #f4f4f4 !important;
+				}
+				body {
+					font-family: arial, sans-serif;
+					max-width: 1000px;
+					margin: 50px auto;
+					padding: 0px;
+					line-height: 1.6;
+					border: none !important;
+					border-radius: 0px !important;
+					display: flex;
+				}
+				.profile-photo {
+					width: 200px !important;
+					height: 200px !important;
+					border-radius: 50% !important;
+					background: #ccc !important;
+					margin: 0 auto 20px !important;
+				}
+				.left-column {
+					width: 35%;
+				}
+			}
+			body {
+				font-family: arial, sans-serif;
+				max-width: 1000px;
+				margin: 50px auto;
+				padding: 20px;
+				line-height: 1.6;
+				border: 2px solid #333;
+				border-radius: 10px;
+				display: flex;
+			}
+			.container {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+			.left-column {
+				width: 35%;
+				background: #f4f4f4;
+				padding: 20px;
+				border-right: 2px solid #333;
+			}
+			.profile-photo {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				background: #ccc;
+				margin: 20px auto 40px;
+			}
+			.title {
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			.right-column {
+				width: 65%;
+				padding: 20px;
+			}
+			h1, h2 {
+				color: #333;
+			}
+			.section {
+				margin-bottom: 20px;
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 10px;
+			}
+			a {
+				color: black;
+				text-decoration: none;
+				position: relative;
+				padding-left: 25px; /* space for the icon */
+			}
+			a::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 2px;
+				background: black;
+				transition: width 0.3s ease-in-out;
+				position: absolute;
+				left: -2px;
+				bottom: -3px;
+			}
+			a:hover::after {
+				width: 100%;
+			}
+			/* icon styling */
+			.icon {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translatey(-50%);
+			}
+			.job-title {
+				font-weight: bold;
+				margin-bottom: 2px;
+			}
+			.date {
+				margin-top: 2px;
+				font-size: 14px;
+				color: #666;
+			}
+			.project {
+				margin-top: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left-column">
+				<div class="profile-photo"></div>
+				<div class="title" style="text-align: center;">Software Engineer</div>
+				<p>42 Paris alumnus, passionate software engineer with interests in software, low level programming and data science.</p>
+				<h2>Contact</h2>
+				<a href="mailto:clement.desede@gmail.com">
+					<i class="fas fa-envelope icon"></i> clement.desede@gmail.com
+				</a>
+				<br>
+				<a href="https://github.com/cde-sede/">
+					<i class="fab fa-github icon"></i> github.com/cde-sede
+				</a>
+				<br>
+				<a href="tel:+3361946177">
+					<i class="fas fa-phone icon"></i> +33 6 13 94 61 77
+				</a>
+				<h2>Skills</h2>
+				<ul>
+					<li>Linux</li>
+					<li>C / C++</li>
+					<li>Python</li>
+					<li>Shell</li>
+					<li>Git</li>
+					<li>QEMU / KVM</li>
+				</ul>
+				<h2>Languages</h2>
+				<ul>
+					<li>English</li>
+					<li>French</li>
+				</ul>
+			</div>
+			<div class="right-column">
+				<header>
+					<h1>Clément de Sède</h1>
+				</header>
+				<section class="section"> </section>
+				<section class="section">
+					<h2>Education</h2>
+					<p class="job-title">42 school - Software Engineering</p>
+					<p class="date">2021 – 2024</p>
+					<p>A curriculum focused on the C language based on projects created to help learn or deepen a specific concept in programming.</p>
+					<ul>
+						<li>Learned about C, C++ and low-level programming</li>
+						<li>Learned about Linux and its nuances around processes, the file system, virtual memory, etc.</li>
+						<li>A rudimentary experience working with common tools like git and docker</li>
+					</ul>
+				</section>
+				<section class="section">
+					<h2>Noteworhty Projects</h2>
+					<div class="project">
+						<a href="https://reader.cde-sede.com/app">
+							<i class="fas fa-link icon"></i>
+							<strong>Reader</strong>
+						</a>
+						- An EPUB reader made using Flask and React
+					</div>
+					<div class="project">
+						<a href="https://github.com/cde-sede/psl">
+							<i class="fas fa-link icon"></i>
+							<strong>PSL</strong>
+						</a>
+						- A toy programming language inspired by Porth written in Python created to learn more about compilers
+					</div>
+					<div class="project">
+						<a href="https://github.com/dxrxbxk/war"><i class="fas fa-link icon"></i>
+							<strong>War</strong>
+						</a>
+						- A self replicating program making use of ELF static injection written in C and assembly
+					</div>
+					<div class="project">
+						<a href="https://github.com/cde-sede/python-jsonrpc" style="top-margin: 100px"><i class="fas fa-link icon"></i>
+							<strong>JSON-RPC</strong>
+						</a>
+						- An implementation of the json remote procedure call protocol in python with sockets
+					</div>
+					<div class="project">
+						<strong>Transcendance</strong>
+						- A website made using Django and React, with basic features such as authentication, and a pong game using websockets
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>
+
